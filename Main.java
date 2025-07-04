@@ -4,13 +4,11 @@ import java.time.LocalDate;
 import java.util.*;
 import java.time.LocalDate;
 
-// --- Interfaces ---
 interface Shippable {
     String getName();
     double getWeight();
 }
 
-// --- Product Classes ---
 abstract class Product {
     String name;
     double price;
@@ -94,7 +92,6 @@ class ShippableNonExpirableProduct extends NonExpirableProduct implements Shippa
     }
 }
 
-// --- Customer Class ---
 class Customer {
     String name;
     double balance;
@@ -117,7 +114,6 @@ class Customer {
     }
 }
 
-// --- Cart Item & Cart ---
 class CartItem {
     Product product;
     int quantity;
@@ -175,7 +171,7 @@ class Cart {
     }
 }
 
-// --- Shipping Service ---
+
 class ShippingService {
     static void ship(List<Shippable> items) {
         if (items.isEmpty()) return;
